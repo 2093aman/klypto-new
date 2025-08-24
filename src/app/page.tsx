@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import TestimonialsSwiper from "@/components/layout/testimonial";
+import FAQSection from "@/components/layout/FaqSection";
 
 export default function HomePage() {
   // Ref for animated image
@@ -150,7 +151,7 @@ export default function HomePage() {
                 alt="Top Left"
                 width={120}
                 height={120}
-                className="w-20 h-20"
+                // className="w-20 h-20"
                 priority
               />
             </div>
@@ -161,7 +162,7 @@ export default function HomePage() {
                 alt="Top Right"
                 width={180}
                 height={80}
-                className="w-36 h-16"
+                // className="w-36 h-16"
                 priority
               />
             </div>
@@ -172,7 +173,7 @@ export default function HomePage() {
                 alt="Bottom Left"
                 width={180}
                 height={120}
-                className="w-36 h-24"
+                // className="w-36 h-24"
                 priority
               />
             </div>
@@ -186,7 +187,7 @@ export default function HomePage() {
                 alt="Bottom Right"
                 width={180}
                 height={120}
-                className="w-36 h-24"
+                // className="w-36 h-24"
                 priority
               />
             </div>
@@ -207,7 +208,9 @@ export default function HomePage() {
       {/* Stats Section */}
       <StatsCounter />
 
-
+<div   style={{
+          background: "linear-gradient(184deg, #FFFFFF 26%, #e3fde7 100%)",
+        }}>
       {/* Add this section BEFORE "A New Era Of Intelligent Trading" section */}
       <section className="w-full  py-16"
         style={{
@@ -824,8 +827,43 @@ export default function HomePage() {
   </div>
 </section>
 <TestimonialsSwiper/>
+   
+<FAQSection/>
 
-      <footer className="bg-[#222] pt-8">
+
+<section className=" py-12">
+      <div className="max-w-6xl mx-auto">
+        <div className="bg-black rounded-2xl grid md:grid-cols-2 items-center overflow-hidden">
+          
+          {/* Left Content */}
+          <div className="p-8 md:p-12">
+            <h2 className="text-[30px] font-bold text-white mb-4">
+              New To Trading?
+            </h2>
+            <p className="text-[16px] font-normal text-white mb-6 leading-relaxed">
+              Our Extensive Library Of Educational Materials, Webinars, And Tutorials 
+              Is Designed To Equip You With The Knowledge You Need To Excel In Trading.
+            </p>
+            <button className="bg-white text-black font-semibold px-6 py-2 rounded-full hover:bg-gray-200 transition">
+              Let&apos;s Begin
+            </button>
+          </div>
+
+          {/* Right Image */}
+          <div className="flex justify-center md:justify-end">
+            <Image
+              src="/images/home/phonecrop.jpg" 
+              alt="New to Trading"
+              width={500}
+              height={400}
+              className="rounded-2xl object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+      <footer className="bg-[#222] pt-8 pb-10">
         <div className="max-w-[1140px] mx-auto w-full">
           {/* Top Help Bar */}
           <div className="max-w-6xl mx-auto w-full rounded-2xl bg-gradient-to-r from-[#7be495] to-[#2d7ff9] flex flex-col md:flex-row items-center justify-between px-6 py-6 mb-8">
@@ -936,7 +974,7 @@ export default function HomePage() {
             </div>
           </div>
           {/* Disclaimer & Copyright */}
-          <div className="max-w-6xl mx-auto w-full mt-4 mb-6 rounded-2xl bg-gradient-to-b from-[#7be495] to-[#2d7ff9] px-6 py-8 text-center text-white">
+          <div className="max-w-6xl mx-auto w-full mt-4 pb-10 rounded-2xl bg-gradient-to-b from-[#7be495] to-[#2d7ff9] px-6 py-8 text-center text-white">
             <div className="font-bold text-lg mb-2">
               For any complaints, please email us at <span className="underline">info@klypto.app</span>.
             </div>
